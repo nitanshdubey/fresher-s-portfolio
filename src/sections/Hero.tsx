@@ -144,26 +144,31 @@ function Hero() {
         >
           {/* Background Shape */}
           <motion.div
-            variants={cardVariants}
-            className="absolute top-8 right-4 w-64 h-64 rounded-[2rem] bg-gradient-to-br from-[var(--color-accent-indigo)]/10 to-[var(--color-accent-cyan)]/10 border-subtle"
-          />
+  variants={cardVariants}
+  className="absolute top-8 right-4 w-64 h-64 rounded-[2rem] overflow-hidden border-subtle shadow-soft"
+>
+  <img
+    src="https://github.com/nitanshdubey/fresher-s-portfolio/blob/main/caroline-badran-rpyxB9yOFXw-unsplash.jpg?raw=true"
+    alt="Creative workspace"
+    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+  />
+
+  {/* Optional subtle dark overlay for a premium look */}
+  <div className="absolute inset-0 bg-black/10" />
+</motion.div>
 
           {/* Browser Card */}
           <motion.div
             variants={cardVariants}
             className="animate-float absolute top-4 left-2 w-64 rounded-2xl bg-[var(--color-bg-elevated)] shadow-soft border-subtle overflow-hidden"
           >
-            <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[var(--color-border)]">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
-            </div>
-
-            <div className="p-4 space-y-2">
-              <div className="h-2.5 w-3/4 rounded-full bg-[var(--color-border-strong)]" />
-              <div className="h-2.5 w-1/2 rounded-full bg-[var(--color-border)]" />
-              <div className="mt-3 h-16 rounded-lg bg-gradient-to-br from-[var(--color-accent-indigo)]/15 to-[var(--color-accent-cyan)]/15" />
-            </div>
+            <div className="overflow-hidden">
+  <img
+    src="https://github.com/nitanshdubey/fresher-s-portfolio/blob/main/michal-bielejewski-P8tzRoPwTu8-unsplash.jpg?raw=true"
+    alt="Modern workspace"
+    className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+  />
+</div>
           </motion.div>
 
           {/* Uptime Card */}
@@ -186,21 +191,29 @@ function Hero() {
 
           {/* Deploy Card */}
           <motion.div
-            variants={cardVariants}
-            className="animate-float absolute bottom-0 right-6 w-52 rounded-2xl bg-[var(--color-bg-elevated)] shadow-soft border-subtle p-4"
-          >
-            <div className="flex items-center gap-2 mb-3">
-              <CheckCircle2
-                size={16}
-                className="text-[var(--color-accent-emerald)]"
-              />
-              <span className="text-sm font-medium">Deploy successful</span>
-            </div>
+  variants={cardVariants}
+  className="animate-float absolute bottom-0 right-6 w-56 rounded-2xl overflow-hidden bg-[var(--color-bg-elevated)] shadow-soft border-subtle"
+>
+  <img
+    src="https://github.com/nitanshdubey/fresher-s-portfolio/blob/main/microsoft-copilot-ghVMdPN33vM-unsplash.jpg?raw=true"
+    alt="AI coding workspace"
+    className="w-full h-44 object-cover"
+  />
 
-            <div className="h-2 w-full rounded-full bg-[var(--color-border)]">
-              <div className="h-2 w-4/5 rounded-full bg-[var(--color-accent-indigo)]" />
-            </div>
-          </motion.div>
+  <div className="p-4">
+    <div className="flex items-center gap-2 mb-2">
+      <CheckCircle2
+        size={16}
+        className="text-[var(--color-accent-emerald)]"
+      />
+      <span className="text-sm font-medium">Deploy successful</span>
+    </div>
+
+    <div className="h-2 w-full rounded-full bg-[var(--color-border)]">
+      <div className="h-2 w-4/5 rounded-full bg-[var(--color-accent-indigo)]" />
+    </div>
+  </div>
+</motion.div>
 
           {/* Sparkle */}
           <motion.div

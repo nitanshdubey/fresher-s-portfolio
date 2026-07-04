@@ -4,13 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ------------------------------------------------------------------ */
-/* Design Tokens                                                       */
-/* ------------------------------------------------------------------ */
 :root {
   /* Surfaces */
   --color-bg: #FAFAFA;
   --color-bg-elevated: #FFFFFF;
+  --color-bg-alt: #F2F2F3;
+  --color-bg-alt-elevated: #F7F7F8;
+  --color-bg-sunken: #EEEEEF;
+
+  /* Gray Scale (for premium neutral depth) */
+  --gray-50: #FAFAFA;
+  --gray-100: #F2F2F3;
+  --gray-150: #EAEAEC;
+  --gray-200: #E2E2E4;
+  --gray-300: #D1D1D4;
+  --gray-400: #A8A8AD;
+  --gray-500: #7C7C82;
 
   /* Text */
   --color-text-primary: #111111;
@@ -50,16 +59,11 @@
   --duration-slow: 0.8s;
 }
 
-/* ------------------------------------------------------------------ */
-/* Base                                                                 */
-/* ------------------------------------------------------------------ */
 * {
   box-sizing: border-box;
 }
 
 html {
-  /* Lenis handles smooth scrolling; native smooth scroll is disabled
-     to avoid double-easing conflicts. */
   scroll-behavior: auto;
 }
 
@@ -111,9 +115,6 @@ button {
   cursor: pointer;
 }
 
-/* ------------------------------------------------------------------ */
-/* Accessibility                                                        */
-/* ------------------------------------------------------------------ */
 :focus-visible {
   outline: none;
   box-shadow: var(--shadow-focus);
@@ -129,9 +130,6 @@ button {
   }
 }
 
-/* ------------------------------------------------------------------ */
-/* Selection & Scrollbar                                                */
-/* ------------------------------------------------------------------ */
 ::selection {
   background-color: rgba(79, 70, 229, 0.15);
   color: var(--color-text-primary);
@@ -155,9 +153,6 @@ button {
   background-color: var(--color-text-muted);
 }
 
-/* ------------------------------------------------------------------ */
-/* Shared Utility Classes                                               */
-/* ------------------------------------------------------------------ */
 .content-width {
   max-width: var(--max-content-width);
 }
@@ -194,4 +189,42 @@ button {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--color-border);
+}
+
+/* ------------------------------------------------------------------ */
+/* Premium Gray/White Section System                                    */
+/* ------------------------------------------------------------------ */
+
+.bg-surface {
+  background-color: var(--color-bg);
+}
+
+.bg-surface-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.bg-surface-elevated {
+  background-color: var(--color-bg-elevated);
+}
+
+.card-gray {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft-sm);
+}
+
+.card-gray-alt {
+  background-color: var(--gray-100);
+  border: 1px solid var(--color-border);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border-strong) 20%,
+    var(--color-border-strong) 80%,
+    transparent
+  );
 }

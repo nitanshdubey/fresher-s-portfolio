@@ -28,14 +28,17 @@ function About() {
           className="lg:col-span-5 relative"
         >
           <div className="relative w-full max-w-sm mx-auto lg:mx-0">
-            {/* Photo placeholder */}
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-subtle shadow-soft bg-gradient-to-br from-[var(--color-accent-indigo)]/10 to-[var(--color-accent-cyan)]/10">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-6xl font-[var(--font-display)] font-semibold text-[var(--color-accent-indigo)]/30">
-                  AD
-                </span>
-              </div>
-            </div>
+            {/* Owner Photo */}
+<div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-subtle shadow-soft">
+  <img
+    src="https://github.com/nitanshdubey/fresher-s-portfolio/blob/main/nick-page-_vzH7Wot-eQ-unsplash.jpg?raw=true"
+    alt="Portfolio Owner"
+    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+  />
+
+  {/* Optional subtle overlay for premium look */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+</div>
 
             {/* Floating accent card */}
             <motion.div

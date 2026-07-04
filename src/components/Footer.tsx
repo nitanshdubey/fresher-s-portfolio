@@ -11,17 +11,17 @@ const SOCIAL_LINKS = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/adityadev",
+    href: "https://github.com/helloadev",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/adityadev",
+    href: "https://linkedin.com/in/helloadev",
   },
   {
     icon: Mail,
     label: "Email",
-    href: "mailto:hello@adityadev.com",
+    href: "mailto:hello@helloadev.com",
   },
 ];
 

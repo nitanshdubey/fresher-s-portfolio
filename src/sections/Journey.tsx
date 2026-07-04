@@ -63,7 +63,7 @@ const JOURNEY_STEPS: JourneyStep[] = [
 
 function Journey() {
   return (
-    <section id="journey" className="section-padding page-width">
+    <section id="journey" className="section-padding page-width bg-surface-alt">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

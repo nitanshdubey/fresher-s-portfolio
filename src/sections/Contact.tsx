@@ -14,20 +14,20 @@ const CONTACT_DETAILS = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@adityadev.com",
-    href: "mailto:hello@adityadev.com",
+    value: "hello@helloadev.com",
+    href: "mailto:hello@helloadev.com",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/adityadev",
-    href: "https://linkedin.com/in/adityadev",
+    value: "linkedin.com/in/helloadev",
+    href: "https://linkedin.com/in/helloadev",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/adityadev",
-    href: "https://github.com/adityadev",
+    value: "github.com/helloadev",
+    href: "https://github.com/helloadev",
   },
   {
     icon: MapPin,

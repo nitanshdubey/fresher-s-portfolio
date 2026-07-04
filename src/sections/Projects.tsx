@@ -7,7 +7,7 @@ interface Project {
   stack: string[];
   githubUrl: string;
   liveUrl: string;
-  accent: string;
+  image: string;
 }
 
 const PROJECTS: Project[] = [
@@ -18,8 +18,8 @@ const PROJECTS: Project[] = [
     stack: ["React", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/",
     liveUrl: "https://example.com/",
-    accent:
-      "from-[var(--color-accent-indigo)]/15 to-[var(--color-accent-cyan)]/10",
+    image:
+      "https://github.com/nitanshdubey/fresher-s-portfolio/blob/main/balazs-ketyi-LPWl2pEVGKc-unsplash.jpg?raw=true",
   },
   {
     name: "WeatherLens",
@@ -28,8 +28,8 @@ const PROJECTS: Project[] = [
     stack: ["React", "REST API", "Framer Motion"],
     githubUrl: "https://github.com/",
     liveUrl: "https://example.com/",
-    accent:
-      "from-[var(--color-accent-cyan)]/15 to-[var(--color-accent-emerald)]/10",
+    image:
+      "https://github.com/nitanshdubey/fresher-s-portfolio/blob/main/craig-whitehead-SuJp8ZpkubI-unsplash.jpg?raw=true",
   },
   {
     name: "DevNotes",
@@ -38,25 +38,27 @@ const PROJECTS: Project[] = [
     stack: ["TypeScript", "React", "Git"],
     githubUrl: "https://github.com/",
     liveUrl: "https://example.com/",
-    accent:
-      "from-[var(--color-accent-emerald)]/15 to-[var(--color-accent-indigo)]/10",
+    image:
+      "https://github.com/nitanshdubey/fresher-s-portfolio/blob/main/samantha-borges-2N27SOmwiWg-unsplash.jpg?raw=true",
   },
 ];
 
-function ProjectImagePlaceholder({ accent }: { accent: string }) {
+function ProjectImage({
+  src,
+  alt,
+}: {
+  src: string;
+  alt: string;
+}) {
   return (
-    <div
-      className={`relative w-full aspect-[16/10] rounded-t-2xl overflow-hidden bg-gradient-to-br ${accent} border-b border-[var(--color-border)]`}
-    >
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="flex gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-white/70" />
-          <span className="w-2.5 h-2.5 rounded-full bg-white/50" />
-          <span className="w-2.5 h-2.5 rounded-full bg-white/30" />
-        </div>
-      </div>
+    <div className="relative w-full aspect-[16/10] rounded-t-2xl overflow-hidden border-b border-[var(--color-border)]">
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      />
 
-      <div className="absolute bottom-4 left-4 right-4 h-20 rounded-lg bg-white/40 backdrop-blur-sm border border-white/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
     </div>
   );
 }
@@ -100,9 +102,10 @@ function Projects() {
             className="hover-lift group rounded-2xl border-subtle bg-[var(--color-bg-elevated)] overflow-hidden shadow-soft flex flex-col"
           >
             <div className="overflow-hidden">
-              <div className="transition-transform duration-500 group-hover:scale-105">
-                <ProjectImagePlaceholder accent={project.accent} />
-              </div>
+              <ProjectImage
+                src={project.image}
+                alt={project.name}
+              />
             </div>
 
             <div className="p-6 flex flex-col flex-1">
